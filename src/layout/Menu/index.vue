@@ -1,7 +1,7 @@
 <template>
   <el-menu
-    active-text-color="#ffd04b"
-    background-color="#304156"
+    :active-text-color="variables.menuActiveText"
+    :background-color="variables.menuBg"
     class="el-menu-vertical-demo"
     :default-active="defaultActive"
     text-color="#fff"
@@ -39,6 +39,7 @@
 <script setup>
 import { menuList } from '@/api/menu'
 import { ref } from 'vue'
+import variables from '@/styles/variables.scss'
 
 const iconList = ref(['user', 'setting', 'shop', 'tickets', 'pie-chart'])
 const icon = ref('menu')

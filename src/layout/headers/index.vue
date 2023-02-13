@@ -1,10 +1,8 @@
 <template>
-    <div class="nav-bar"></div>
+  <div class="nav-bar"></div>
 </template>
 
-<script setup>
-
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .navbar {

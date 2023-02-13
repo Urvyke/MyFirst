@@ -16,7 +16,7 @@
 import Menu from './Menu'
 import Headers from './headers'
 import { ref } from 'vue'
-import variables from './styles/variables.scss'
+import variables from '@/styles/variables.scss'
 const asideWidth = ref(variables.sideBarWidth)
 </script>
 
