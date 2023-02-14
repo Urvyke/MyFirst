@@ -1,12 +1,13 @@
 <template>
   <el-menu
-    :active-text-color="variables.menuActiveText"
+    active-text-color="#ffd04b"
     :background-color="variables.menuBg"
     class="el-menu-vertical-demo"
     :default-active="defaultActive"
     text-color="#fff"
     router
     unique-opened
+    :collapse="!$store.getters.siderType"
   >
     <el-sub-menu
       :index="item.id"
@@ -29,7 +30,7 @@
           <el-icon>
             <component :is="icon"></component>
           </el-icon>
-          <span>{{ it.authName }}</span>
+          <span>{{ $t(`menus.${it.path}`) }}</span>
         </template>
       </el-menu-item>
     </el-sub-menu>
@@ -39,7 +40,7 @@
 <script setup>
 import { menuList } from '@/api/menu'
 import { ref } from 'vue'
-import variables from '@/styles/variables.scss'
+import variables from '@/styles/variables.module.scss'
 
 const iconList = ref(['user', 'setting', 'shop', 'tickets', 'pie-chart'])
 const icon = ref('menu')
